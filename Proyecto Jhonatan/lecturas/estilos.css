@@ -1,0 +1,210 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+ 
+.contenedor {
+	
+	width:90%;
+	max-width:1000px;
+	margin:auto;
+ 
+	/* Flexbox */
+    display:flex;
+	flex-flow:row wrap;
+}
+
+ 
+body {
+	
+	background-image:url(../img/fondo1.png);
+    height: 100;
+    
+        
+	
+
+}
+ 
+header {
+	
+	width:100%;
+	padding:20px;
+ 
+    
+    display: flex;
+	justify-content:space-between;
+	align-items:center;
+ 
+	flex-direction:row;
+	flex-wrap:wrap;
+}
+ 
+header .logo {
+	color:#fff;
+	font-size:70px;
+}
+ 
+header .logo img {
+	width:270px;
+	vertical-align: top;
+}
+ 
+header .logo a {
+    
+	color:#fff;
+	text-decoration: none;
+	line-height:50px;
+}
+ 
+header nav {
+	width:70%;
+	display:flex;
+	flex-wrap:wrap;
+	align-items:center;
+}
+ 
+header nav a {
+	background:#5D6AB0;
+     border-radius: 10px;
+	color:#fff;
+	text-align: center;
+	text-decoration: none;
+	padding:7px;
+ 	/* Flexbox */
+	flex-grow:1;
+}
+ 
+header nav a:hover {
+	background:#e74c3c;
+}
+ 
+.main {
+    /*es donde esta todo el texto de vivelab*/
+	padding:20px;
+    flex:1;
+   /*flex:1 1 70%;*/ 
+}
+ 
+.main article {
+	margin-bottom: 20px;
+	padding-bottom:20px;
+	border-bottom:1px solid #000;
+}
+ 
+.main article:nth-last-child(1){
+	margin-bottom: 0;
+	padding-bottom: 0;
+	border-bottom:none;
+}
+ 
+aside {
+	background:	#5D6AB0;
+	padding:0px;
+	/*FLEX*/
+    flex:0 0 10px;
+	/*flex:0 0 300px;*/
+ 
+	display: flex;
+	flex-wrap:wrap;
+	flex-direction:column;
+	justify-content:flex-start;
+	text-align: center;
+    
+}
+ 
+/*aside .widget {
+	
+	height:50px;
+	margin:0px;
+	text-align: center;
+}*/
+
+ 
+footer {
+    
+	
+	width: 100%;
+	padding:20px;
+ 
+	/* Flexbox */
+	display: flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+}
+ 
+footer .links {
+	background:#E74C3C;
+	display:flex;
+	flex-wrap:wrap;
+	text-align: right;
+	
+}
+ 
+footer .links a {
+
+	flex-grow:1;
+	color:#fff;
+	padding:10px;
+	text-align: center;
+	text-decoration:none;
+}
+ 
+footer .links a:hover {
+	background:#E74C3C;
+	
+}
+ 
+footer .social {
+	background: rgb(64, 52, 189);
+	text-align: center;
+    border-radius: 13px;
+}
+ 
+footer .social a {
+	color:#fff;
+	text-decoration: none;
+	padding:10px;
+	display: inline-block;
+    
+	
+}
+ 
+@media screen and (max-width: 800px) {
+	.contenedor {
+		flex-direction:column;
+	}
+ 
+	header {
+		flex-direction:column;
+		padding:0;
+	}
+ 
+	header .logo {
+		margin:20px 0;
+	}
+ 
+	header nav {
+		width: 100%;
+	}
+ 
+	aside {
+		flex-direction:row;
+		flex:0;
+	}
+ 
+	aside .widget {
+		flex-grow:1;
+	}
+}
+ 
+@media screen and (max-width: 600px) {
+	aside {
+		flex-direction:column;
+	}
+ 
+	footer {
+		justify-content:space-around;
+	}
+}
